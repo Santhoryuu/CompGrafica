@@ -1,0 +1,38 @@
+float xsol, ysol, diametro, diametroLua, diametroTerra, angle, xTerra, yTerra, xLua, yLua, dSol, dTerra;
+
+void setup() {
+  size(800, 600);
+  stroke(255);
+  float raio = min(width/1.2, height/1.2) / 2;
+  xsol = width / 2;
+  ysol = height / 2;
+  diametro = raio * 0.3;
+  diametroLua = diametro/3;
+  diametroTerra = diametro/2;
+  xTerra = xsol + 100;
+  yTerra = ysol;
+  
+}
+
+void roda(float ax,float ay, float bx,float by, float ang,float cx,float cy)
+      {
+        float b2x = bx - ax;
+        float b2y = by - ay;
+        float c2x = b2x*cos(ang)-b2y*sin(ang);
+        float c2y = b2x*sin(ang)+b2y*cos(ang);
+        cx = c2x+ax;
+        cy = c2y+ay;
+}
+void draw() {
+  background(255);
+  fill(255,255,0);
+  noStroke();
+  ellipse(xsol, ysol, diametro, diametro);
+  fill(0,0,255);
+  
+  roda(xsol, ysol, xTerra, yTerra, PI/30, xTerra, yTerra);
+  ellipse(xTerra, yTerra, diametroTerra, diametroTerra);
+}
+  
+  
+  
