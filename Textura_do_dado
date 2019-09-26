@@ -114,14 +114,14 @@ def DrawGLScene():
     # Left Face numero 5
     glTexCoord2f(1.0/3.0, 0.5); glVertex3f(-1.0, -1.0, -1.0)  
     glTexCoord2f(2.0/3.0, 0.5); glVertex3f(-1.0, -1.0,  1.0)    
-    glTexCoord2f(1.0/3.0, 1.0); glVertex3f(-1.0,  1.0,  1.0)   
-    glTexCoord2f(2.0/3.0, 1.0); glVertex3f(-1.0,  1.0, -1.0)   
+    glTexCoord2f(2.0/3.0, 1.0); glVertex3f(-1.0,  1.0,  1.0)   
+    glTexCoord2f(1.0/3.0, 1.0); glVertex3f(-1.0,  1.0, -1.0)   
      
     glEnd()                # Done Drawing The Cube
      
-    xrot  = xrot + 0.01                # X rotation
-    yrot = yrot + 0.01                 # Y rotation
-    zrot = zrot + 0.01                 # Z rotation
+    xrot  = xrot + 1.0                # X rotation
+    yrot = yrot + 0.0                 # Y rotation
+    zrot = zrot + 0.0             # Z rotation
  
     glutSwapBuffers()
  
